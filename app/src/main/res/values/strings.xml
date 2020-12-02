@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SportUp</string>
+    <array name="Wight">
+        <item>30-40(KG)</item>
+        <item>40-50(KG)</item>
+        <item>50-60(KG)</item>
+        <item>60-70(KG)</item>
+        <item>70-80(KG)</item>
+        <item>90-100(KG)</item>
+        <item>100+(KG)</item>
+
+    </array>
+</resources>

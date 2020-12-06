@@ -110,7 +110,7 @@
             app:layout_constraintHorizontal_bias="0.378"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/images" />
+            app:srcCompat="@drawable/kidmit" />
 
         <Spinner
             android:id="@+id/spinner_user_weight"
@@ -140,13 +140,13 @@
 
         <Switch
             android:id="@+id/chak_is_healty"
-            android:layout_width="238dp"
-            android:layout_height="98dp"
+            android:layout_width="185dp"
+            android:layout_height="119dp"
             android:layout_marginTop="40dp"
             android:background="#812D175C"
             android:text="I declare that I am healthy for any sporting activity"
             android:textColor="#121111"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"

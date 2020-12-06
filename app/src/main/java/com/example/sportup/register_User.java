@@ -52,12 +52,13 @@ public class register_User extends AppCompatActivity {
                     User new_user = new User(name, phone, city, high, password, weight);
                     trainerDbRef.child(id).setValue(new_user);
                     Toast.makeText(register_User.this, "Data inserted!", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent( register_User.this,success_join.class);
+                    startActivity(i);
                 } else {
                     Toast.makeText(register_User.this, "checking Switch please!",
                             Toast.LENGTH_LONG).show();
                 }
-                    Intent i = new Intent( register_User.this,success_join.class);
-                    startActivity(i);
+
 
             }
         });

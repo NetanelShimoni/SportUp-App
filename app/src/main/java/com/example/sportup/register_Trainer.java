@@ -76,6 +76,8 @@ public class register_Trainer extends AppCompatActivity {
                     Tranier t = new Tranier(name, city, phone,password);
                     trainerDbRef.child(id).setValue(t);
                     Toast.makeText(register_Trainer.this, "Data inserted!", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent( register_Trainer.this,success_join.class);
+                    startActivity(i);
                 }else {
                     Toast.makeText(register_Trainer.this, "checking box please!",
                             Toast.LENGTH_LONG).show();

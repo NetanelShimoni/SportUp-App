@@ -3,6 +3,7 @@ package com.example.sportup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,13 +41,12 @@ TextView name , password;
                         String name1 =name.getText().toString();
                         String pass1 =password.getText().toString();
                         for (DataSnapshot ds : snapshot.getChildren()){
-                            System.out.println("name on progarm:"+name1);
-                            System.out.println("pass on progarm:"+pass1);
-                            System.out.println("name is: "+ds.child("name").getValue().toString());
-                            System.out.println("name is: "+ds.child("password").getValue().toString());
                             if(ds.child("name").getValue().equals(name1) && ds.child("password").getValue().equals(pass1)){
                                 flag=true;
                                 Toast.makeText(trainer_Login.this,"OK!!!",Toast.LENGTH_LONG).show();
+
+                                Intent j = new Intent(trainer_Login.this , trainer_Home.class);
+                                startActivity(j);
                             }
                         }
                         if(!flag){

@@ -17,6 +17,6 @@ public class success_join extends AppCompatActivity {
     public void MainActivity(View v){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
-
     }
+
 }

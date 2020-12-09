@@ -28,7 +28,7 @@ ImageView imageView;
     }
 
 
-    public void trainer_Login(View v){
+    public void trainer_Login(View v,int x){
         Intent intent = new Intent(this,trainer_Login.class);
         startActivity(intent);
 

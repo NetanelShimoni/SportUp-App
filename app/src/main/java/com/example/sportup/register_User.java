@@ -32,7 +32,7 @@ public class register_User extends AppCompatActivity {
         etPhone = findViewById(R.id.user_phone);
         join = (Button) findViewById(R.id.user_join);
         aSwitch = findViewById(R.id.chak_is_healty);
-        etHigh = findViewById(R.id.spinner_user_high);
+        etHigh = findViewById(R.id.spinner_trainer_muselse);
         etWeight = findViewById(R.id.spinner_user_weight);
         FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
         trainerDbRef = mDatabase.getInstance().getReference("User");

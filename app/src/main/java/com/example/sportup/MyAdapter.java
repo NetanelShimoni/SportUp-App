@@ -1,54 +1,75 @@
 package com.example.sportup;
 
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyAdapter  extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    Context ct ;
-    String s1[],s2[];
-    int image[];
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-    public MyAdapter (Context ct , String s1[],String s2[], int image[]){
-        this.ct=ct;
-        this.s1=s1;
-        this.s2=s2;
-        this.image=image;
+    MyMuscles[] MyMuscles;
+    Context context;
+    Tranier t;
+
+    public MyAdapter(MyMuscles[] MyMuscles,trainer_Home activity,Tranier t) {
+        this.MyMuscles = MyMuscles;
+        this.context = activity;
+        this.t=t;
     }
+
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater =LayoutInflater.from(ct);
-        View view= inflater.inflate(R.layout.activity_trainer__home,parent,false);
-        return new  MyViewHolder(view);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View view = layoutInflater.inflate(R.layout.masuels_item_list,parent,false);
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-    holder.t1.setText(s1[position]);
-    holder.t2.setText(s2[position]);
-    holder.imageView.setImageResource(image[position]);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        final MyMuscles MyMusclesDataList = MyMuscles[position];
+        holder.textViewName.setText(MyMusclesDataList.getMusclesName());
+        holder.movieImage.setImageResource(MyMusclesDataList.getMusclesImage());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, MyMusclesDataList.getMusclesName(), Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(context, trainer_add_Exersice.class);
+                i.putExtra("trainer", t);
+                i.putExtra("id_m",position);
+                context.startActivity(i);
+
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return s1.length;
+        return MyMuscles.length;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-    TextView t1,t2;
-    ImageView imageView;
-        public MyViewHolder(@NonNull View itemView) {
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        ImageView movieImage;
+        TextView textViewName;
+        TextView textViewDate;
+
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            t1=itemView.findViewById(R.id.masuels);
-            t2=itemView.findViewById(R.id.descrip);
-            imageView=itemView.findViewById(R.id.image_masuels);
+            movieImage = itemView.findViewById(R.id.imageview);
+            textViewName = itemView.findViewById(R.id.textName);
+
         }
     }
+
 }

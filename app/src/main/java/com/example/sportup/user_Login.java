@@ -3,6 +3,7 @@ package com.example.sportup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +43,9 @@ public class user_Login extends AppCompatActivity {
                             if(ds.child("name").getValue().equals(name) && ds.child("password").getValue().equals(password)){
                                 flag=true;
                                 Toast.makeText(user_Login.this,"OK!!!",Toast.LENGTH_LONG).show();
+                                Intent i = new Intent(user_Login.this,user_Home.class);
+                                i.putExtra("name",name);
+                                startActivity(i);
                             }
                         }
                         if(!flag){

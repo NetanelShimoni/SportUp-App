@@ -1,16 +1,26 @@
 package com.example.sportup;
 
 public class User {
-    String name, phone,city,high,password,weight;
+    String name, phone,city,high,password,weight,id;
 
     public User(String name, String phone, String city, String high, String password, String weight) {
         this.name = name;
+        //this.id=id;
         this.phone = phone;
         this.city = city;
         this.high = high;
         this.password = password;
         this.weight = weight;
+
     }
+
+//    public String getId() {
+//        return id;
+//    }
+//
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
     public String getName() {
         return name;

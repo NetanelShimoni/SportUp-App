@@ -51,7 +51,7 @@ public class trainer_add_Exersice extends AppCompatActivity {
 
                 String name_trainer=mover.getName();
                 String phone_trainer=mover.phone_num;
-                Exersice e = new Exersice(name,name_trainer,phone_trainer,discription,witht,hight,link);
+                Exersice e = new Exersice(name_maselce,name,name_trainer,phone_trainer,discription,witht,hight,link);
 
                         exerciseDbRef.child(id).setValue(e);
                         Toast.makeText(trainer_add_Exersice.this, "Data inserted!", Toast.LENGTH_SHORT).show();

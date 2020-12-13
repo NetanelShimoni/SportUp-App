@@ -50,6 +50,7 @@
         android:layout_margin="50dp"
 
         android:background="@drawable/button_selector"
+        android:onClick="find_trainer"
         android:text="find trainer"
         android:textStyle="bold|italic"
         app:backgroundTint="@color/button_green"

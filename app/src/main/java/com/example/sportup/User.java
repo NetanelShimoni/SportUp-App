@@ -1,6 +1,8 @@
 package com.example.sportup;
 
-public class User {
+import java.io.Serializable;
+
+public class User  implements Serializable {
     String name, phone,city,high,password,weight,id;
 
     public User(String name, String phone, String city, String high, String password, String weight) {

@@ -13,7 +13,8 @@
         android:id="@+id/found_exe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="We have found the right exercises for you"
+        android:gravity="center"
+        android:text="Choose your trainer"
         android:textSize="22sp"
         android:textStyle="bold" />
 

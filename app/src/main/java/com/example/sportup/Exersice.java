@@ -1,9 +1,9 @@
 package com.example.sportup;
 
 public class Exersice {
-    String name, trainer_name, trainer_phone, description,wight,hight,link;
+    String name_muselce,name, trainer_name, trainer_phone, description,wight,hight,link;
 
-    public Exersice(String name, String trainer_name, String trainer_phone, String description, String wight, String hight, String link) {
+    public Exersice(String muselce,String name, String trainer_name, String trainer_phone, String description, String wight, String hight, String link) {
         this.name = name;
         this.trainer_name = trainer_name;
         this.trainer_phone = trainer_phone;
@@ -11,6 +11,15 @@ public class Exersice {
         this.wight = wight;
         this.hight = hight;
         this.link = link;
+        this.name_muselce=muselce;
+    }
+
+    public String getName_muselce() {
+        return name_muselce;
+    }
+
+    public void setName_muselce(String name_muselce) {
+        this.name_muselce = name_muselce;
     }
 
     public String getName() {

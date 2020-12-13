@@ -4,15 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#E12979FF"
     android:orientation="vertical">
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="411dp"
-        android:layout_height="504dp"
+        android:layout_height="197dp"
         android:layout_margin="5dp"
-        app:cardBackgroundColor="@android:color/holo_orange_light"
+        app:cardBackgroundColor="#6A755412"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
@@ -21,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="524dp"
             android:layout_marginTop="25dp"
+            android:background="@drawable/bbb"
             android:orientation="horizontal">
 
             <!--            <ImageButton-->
@@ -33,7 +33,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="519dp"
+                android:layout_height="197dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -43,9 +43,8 @@
                     android:layout_width="385dp"
                     android:layout_height="46dp"
                     android:layout_margin="10dp"
-                    android:gravity="center"
                     android:text="masuels Name"
-                    android:textColor="#000"
+                    android:textColor="#FFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
@@ -56,44 +55,9 @@
                     android:layout_margin="10dp"
                     android:gravity="center"
                     android:text="masuels Name"
-                    android:textColor="#000"
+                    android:textColor="#FFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="masuels Name"
-                    android:textColor="#000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/exe_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="masuels Name"
-                    android:textColor="#000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/text_discription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="masuels Name"
-                    android:textColor="#000"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <WebView
-                    android:id="@+id/webView"
-                    android:layout_width="397dp"
-                    android:layout_height="149dp" />
 
 
             </LinearLayout>

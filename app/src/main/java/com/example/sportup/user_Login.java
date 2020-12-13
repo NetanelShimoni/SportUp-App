@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
 
 public class user_Login extends AppCompatActivity {
     EditText etname, etpassword;
@@ -41,10 +42,14 @@ public class user_Login extends AppCompatActivity {
                         boolean flag=false;
                         for (DataSnapshot ds : snapshot.getChildren()){
                             if(ds.child("name").getValue().equals(name) && ds.child("password").getValue().equals(password)){
+                                Object object = ds.getValue(Object.class);
+                                String json = new Gson().toJson(object);
+                                User user= new Gson().fromJson(json, User.class);
+
                                 flag=true;
                                 Toast.makeText(user_Login.this,"OK!!!",Toast.LENGTH_LONG).show();
                                 Intent i = new Intent(user_Login.this,user_Home.class);
-                                i.putExtra("name",name);
+                                i.putExtra("name",user);
                                 startActivity(i);
                             }
                         }

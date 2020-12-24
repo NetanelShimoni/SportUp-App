@@ -79,8 +79,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
+        android:hint="FullName"
         android:inputType="textPersonName"
-        android:text="FullName"
+        android:textColorHint="#050505"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -118,16 +119,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="339dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="612dp"
+        android:layout_marginBottom="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/cropped" />
-
 
     <ImageView
         android:id="@+id/imageView10"
@@ -179,16 +180,15 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
         android:layout_marginTop="91dp"
-        android:layout_marginBottom="336dp"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196"
         app:srcCompat="@drawable/ic_baseline_perm_identity_24" />
 
     <!--    <de.hdodenhof.circleimageview.CircleImageView-->

@@ -68,6 +68,7 @@
         android:layout_margin="50dp"
 
         android:background="@drawable/button_selector"
+        android:onClick="edit_profile_user"
         android:text="profile"
         android:textStyle="bold|italic"
         app:backgroundTint="@color/button_green"

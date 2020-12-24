@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "415447113876",
+    "firebase_url": "https://sportup-application-344fe.firebaseio.com",
+    "project_id": "sportup-application-344fe",
+    "storage_bucket": "sportup-application-344fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415447113876:android:88e40a708355cdd46c9481",
+        "android_client_info": {
+          "package_name": "com.example.sportup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415447113876-r6h1dtka9jata2lnsv7eoo95vvu87q91.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKeBOGbh8Xwlhg0VW6FfH6_6tcw0brCk0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415447113876-r6h1dtka9jata2lnsv7eoo95vvu87q91.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

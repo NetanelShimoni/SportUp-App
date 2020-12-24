@@ -2,16 +2,18 @@ package com.example.sportup;
 
 import java.io.Serializable;
 
-public class User  implements Serializable {
-    String name, phone,city,high,password,weight,id;
+import androidx.annotation.TransitionRes;
 
-    public User(String name, String phone, String city, String high, String password, String weight) {
-        this.name = name;
-        //this.id=id;
-        this.phone = phone;
-        this.city = city;
+public class User  implements Serializable {
+    String id_system,name, phone, city, high, password, weight, id;
+
+    public User(String id_system,String name, String phone, String city, String high, String password, String weight) {
+        this.name=name;
+        this.id_system=id_system;
+        this.city=city;
+        this.phone=phone;
+        this.password=password;
         this.high = high;
-        this.password = password;
         this.weight = weight;
 
     }
@@ -70,5 +72,8 @@ public class User  implements Serializable {
 
     public void setWeight(String weight) {
         this.weight = weight;
+    }
+
+    public void method() {
     }
 }

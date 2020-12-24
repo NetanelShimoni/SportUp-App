@@ -12,6 +12,12 @@ public class Tranier implements Serializable {
         this.phone_num = phone_num;
         this.password = password;
     }
+    public Tranier(String name, String city, String phone_num, String password) {
+        this.name = name;
+        this.city = city;
+        this.phone_num = phone_num;
+        this.password = password;
+    }
     public Tranier(String name, String password , String phone_num) {
         this.name = name;
         this.phone_num = phone_num;

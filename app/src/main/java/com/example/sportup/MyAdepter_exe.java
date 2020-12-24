@@ -1,6 +1,7 @@
 package com.example.sportup;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,12 +22,16 @@ public class MyAdepter_exe extends RecyclerView.Adapter<MyAdepter_exe.ViewHolder
     Context context;
     List<Exersice> Myexe;
     User user;
+    ProgressDialog progressDialog;
 
     public MyAdepter_exe(List Myexe,home_Workout activity,User name) {
         this.Myexe=new ArrayList<>();
         this.Myexe = Myexe;
         this.context = activity;
         this.user=name;
+//        this.progressDialog = new ProgressDialog(context);
+//        progressDialog.setMessage("טוען כרטיסים...");
+//        progressDialog.show();
     }
 
     @NonNull
@@ -42,6 +47,7 @@ public class MyAdepter_exe extends RecyclerView.Adapter<MyAdepter_exe.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Exersice MyexeDataList = Myexe.get(position);
+
         holder.textViewName.setTextColor(R.color.green_dark );
         holder.textViewName.setText("Trainer Name: "+MyexeDataList.trainer_name);
         holder.textViewName1.setTextColor(R.color.green_dark );
@@ -51,10 +57,7 @@ public class MyAdepter_exe extends RecyclerView.Adapter<MyAdepter_exe.ViewHolder
         holder.textViewName0.setTextColor(R.color.green_dark );
         holder.textViewName0.setText(MyexeDataList.getName_muselce());
         String link = new String(MyexeDataList.link);
-       // String s="<iframe width=\"100%\" height=\"100%\"src=\"https://www.youtube.com/embed/eWEF1Zrmdow\" frameborder=\"0\" allowfullscreen></iframe>";
 
-        //link=link.substring(0,24)+"embed/"+link.substring(32,link.length());
-       // int index=link.indexOf("/watch?v=");
        link= link.replaceFirst("watch?v=","embed/");
         String new_link="";
         for (int i = 0; i <link.length() ; i++) {

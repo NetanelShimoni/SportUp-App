@@ -36,7 +36,7 @@ public class Find_trainer extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User user = new User("","","","","","");
+                User user = new User("","","","","","","");
                 Intent in= getIntent();
                 user = (User) in.getSerializableExtra("name");
                 String location_user= user.getCity();

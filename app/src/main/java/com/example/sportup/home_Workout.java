@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +27,8 @@ DatabaseReference exeref;
    public List<Exersice> list;
     Intent intent = getIntent();
     Button back;
-   // User user;
+     public ProgressDialog progressDialog ;
+    // User user;
 
 
     @Override
@@ -34,6 +36,9 @@ DatabaseReference exeref;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home__workout);
         this.list= new ArrayList<>();
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("LOADING...");
+        progressDialog.show();
 
 
 
@@ -43,12 +48,13 @@ DatabaseReference exeref;
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User user = new User("","","","","","");
+                User user = new User("","","","","","","");
                 Intent in= getIntent();
                 user = (User) in.getSerializableExtra("name");
                 String user_hight= user.getHigh();
                 String user_withe= user.getWeight();
                 System.out.println("user name"+ user.name + "wihat"+user.weight+"hight"+user.high);
+
                 for (DataSnapshot ds : snapshot.getChildren()) {
                     Object object = ds.getValue(Object.class);
                     String json = new Gson().toJson(object);
@@ -71,6 +77,7 @@ DatabaseReference exeref;
 
                 MyAdepter_exe MyexeAdapter = new MyAdepter_exe(list,home_Workout.this,user);
                 recyclerView.setAdapter(MyexeAdapter);
+                progressDialog.dismiss();
 
             }
 

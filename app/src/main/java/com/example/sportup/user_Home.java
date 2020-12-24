@@ -31,6 +31,12 @@ TextView welcome;
         i.putExtra("name",user);
         startActivity(i);
     }
+    public void edit_profile_user(View v){
+
+        Intent i = new Intent(user_Home.this, edit_user_profile.class);
+        i.putExtra("name",user);
+        startActivity(i);
+    }
     public void find_trainer(View v){
 
         Intent i = new Intent(user_Home.this,Find_trainer.class);

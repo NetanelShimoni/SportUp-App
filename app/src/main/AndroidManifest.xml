@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportUp">
-        <activity android:name=".trainer_Home"></activity>
+        <activity android:name=".edit_user_profile"></activity>
+        <activity android:name=".Find_trainer" />
+        <activity android:name=".home_Workout" />
+        <activity android:name=".trainer_add_Exersice" />
+        <activity android:name=".user_Home" />
+        <activity android:name=".trainer_Home" />
         <activity android:name=".success_join" />
         <activity android:name=".user_Login" />
         <activity android:name=".register_User" />
@@ -23,10 +28,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

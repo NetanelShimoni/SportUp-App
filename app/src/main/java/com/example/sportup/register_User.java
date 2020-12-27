@@ -32,7 +32,7 @@ public class register_User extends AppCompatActivity {
         etPhone = findViewById(R.id.user_phone);
         join = (Button) findViewById(R.id.user_join);
         aSwitch = findViewById(R.id.chak_is_healty);
-        etHigh = findViewById(R.id.spinner_user_high);
+        etHigh = findViewById(R.id.spinner_trainer_muselse);
         etWeight = findViewById(R.id.spinner_user_weight);
         FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
         trainerDbRef = mDatabase.getInstance().getReference("User");
@@ -48,8 +48,9 @@ public class register_User extends AppCompatActivity {
                 String weight = etWeight.getSelectedItem().toString();
 
                 String id = trainerDbRef.push().getKey();
+                System.out.println("id iss!!"+id);
                 if (aSwitch.isChecked()) {
-                    User new_user = new User(name, phone, city, high, password, weight);
+                    User new_user = new User(id,name, phone, city, high, password, weight);
                     trainerDbRef.child(id).setValue(new_user);
                     Toast.makeText(register_User.this, "Data inserted!", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent( register_User.this,success_join.class);

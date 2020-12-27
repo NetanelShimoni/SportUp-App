@@ -1,15 +1,35 @@
 package com.example.sportup;
 
-public class Tranier {
-    String name , city, phone_num,password;
+import java.io.Serializable;
 
+public class Tranier implements Serializable {
+    String name , city, phone_num,password,id_Trainer;
+
+    public Tranier(String name, String city, String phone_num, String password,String id_Trainer) {
+        this.id_Trainer=id_Trainer;
+        this.name = name;
+        this.city = city;
+        this.phone_num = phone_num;
+        this.password = password;
+    }
     public Tranier(String name, String city, String phone_num, String password) {
         this.name = name;
         this.city = city;
         this.phone_num = phone_num;
         this.password = password;
     }
+    public Tranier(String name, String password , String phone_num) {
+        this.name = name;
+        this.phone_num = phone_num;
+        this.password = password;
+    }
+    public String getId() {
+        return id_Trainer;
+    }
 
+    public void setId(String id_Trainer) {
+        this.id_Trainer = id_Trainer;
+    }
     public String getName() {
         return name;
     }
